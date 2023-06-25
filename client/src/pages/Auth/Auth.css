@@ -1,0 +1,146 @@
+.Auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.Auth > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.a-left {
+  animation-name: slide-in;
+  animation-duration: 1s;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.a-left > img {
+  width: 6rem;
+  height: 4rem;
+  margin-top: -3rem;
+}
+
+.a-right {
+  width: 50%;
+  margin-left: 2rem;
+}
+
+.Webname > h1 {
+  font-size: 4rem;
+  background-color: red;
+  background-image: var(--buttonBg);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+  overflow: hidden;
+  /* width: 00px; */
+  animation: fadeIn 5s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 10; }
+}
+
+.Webname>h6{
+    font-size: 1rem;
+    color: #333; /* set initial color */
+  animation: animate-text 10s infinite; /* set animation */
+}
+@keyframes animate-text {
+  0% {
+    color: #333;
+  }
+  25% {
+    color: #f00; /* change color */
+  }
+  50% {
+    color: #00f; /* change color */
+  }
+  75% {
+    color: #f0f; /* change color */
+  } 
+  100% {
+    color: #333; /* revert to initial color */
+  }
+}
+.authForm{
+    background-color: var(--cardColor);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.authForm>div{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 1300px) {
+  .Auth {
+    flex-direction: column;
+    margin-top: -2rem;    
+  }
+
+  .Webname > h1 {
+    font-size: 3rem;
+  }
+
+  .Webname>h6{
+    font-size: 0.85rem;
+  }
+
+  .a-right {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .signupFor {
+    display: block;
+    flex-direction: column;
+    margin-top: -2rem;   
+  }
+  .signupFo > img {
+    width: 2rem;
+    height: 2rem;
+    margin-top: -3rem;
+    margin-right: -1.5rem;
+  }
+  .signupFo>div > h1 {
+    font-size: 2rem;
+  }
+  .a-left > img {
+    width: 3rem;
+    height: 3rem;
+    margin-top: -3rem;
+    margin-right: -1.5rem;
+  }
+  .Webname > h1 {
+    font-size: 2rem;
+  }
+  .a-right {
+    margin: auto;
+  }
+  .signupForm {
+    display: flex;
+    flex-direction: column;
+    gap:5rem;
+  }
+  .signupForm>div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 2rem;
+    width: 90%;
+  }
+}

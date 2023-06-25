@@ -1,0 +1,11 @@
+.PostSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 110vh;
+  overflow: auto;
+}
+
+.homepage {
+  height: 70vh;
+}
